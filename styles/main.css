@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  justify-content: center;
+}
+
+
+body {
+  background-color: #f9f9f9;
+  font-family: Rubik, sans-serif;
+  text-align: center;
+  margin: 30px;
+}
+
+#container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbb;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 85%;
+  padding: 20px;
+}
+
+.megamillions, .powerball {
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  padding: 20px;
+}
+
+.rules {
+  color: rgb(54, 143, 19);
+}
+
+.logo {
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.genBtn {
+  color: black;
+  
+  width: 25%;
+  padding: 10px;
+  border-radius: 20px;
+  
+}
+
+.genBtn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #990f0f;
+}
+
+.ball, .mmball, .pbball {
+  background-color: #fff;
+  border-radius: 50%;
+  color: #333;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  
+}
+
+/*change megaball to yellow while retaining shadowing and position from ruleset above*/
+.mmball {
+  background-color: #ff0;
+}
+
+/*ditto for powerball color (red)*/
+.pbball {
+  background-color: #f00;
+  color: #fff;
+}
+
+p {
+  color: #333;
+  font-size: smaller;
+  padding-bottom: 5px;
+  padding-top: 4px;
+}
+
+.separator {
+  text-align: center;
+}
+
+.disclaimer, .author {
+  font-size: small;
+}
+
+@media all and (max-width:576px) {
+
+  .ball, .mmball, .pbball {
+    font-size: 15px;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+}
