@@ -46,3 +46,42 @@ function binarySearch(arr, val) {
 const arr = [0,1,2,3,4,6,7,8,100,10000];
 //binarySearch(arr, 100)
 console.log(binarySearch(arr, 100)); // 6
+
+
+mazeTest =
+[ [ 'X', 'X', 'X', 'X', 'X', 'X', 'X' ],
+  [ 'X', '*', 'O', 'O', 'O', '^', 'X' ],
+  [ 'X', '░', 'O', '░', 'O', '░', 'X' ],
+  [ 'X', '░', '░', 'O', 'O', '░', 'X' ],
+  [ 'X', '░', '░', 'O', 'O', '░', 'X' ],
+  [ 'X', '░', '░', '░', '░', '░', 'X' ],
+  [ 'X', 'X', 'X', 'X', 'X', 'X', 'X' ] ];
+ 
+
+function printMaze( maze ) {
+  let result = '';
+  let pos = "";
+  var matrix = maze;
+  for ( let row = 0; row < maze.length; row++ ) {
+    for ( let col = 0; col < maze[ row ].length; col++ ) {
+      pos = maze[ row ][ col ];
+      if(pos != 'O')
+      {
+
+        //result += maze[ row ][ col ] + '.'; 
+        result += matrix[row][col] = '.';
+      }
+      
+      else {
+        //result += maze[ row ][ col ] + ' '; 
+        result += matrix[row][col] = 'W';
+      }  
+        
+    }
+    //console.log(matrix)
+    result += '\n';
+  }
+  return result;
+}
+
+console.log( printMaze( mazeTest ) );
