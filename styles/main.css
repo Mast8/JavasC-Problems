@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  justify-content: center;
-}
 
 
 body {
@@ -17,9 +14,11 @@ body {
 }
 
 #container {
-  text-align: center;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   background-color: #bbb;
   border-radius: 4px;
   color: #fff;

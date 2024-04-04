@@ -155,7 +155,7 @@ function findpath(x,y){
       console.log('Im here at: ' + x + ':' + y);
       map[x][y]=9; 
   
-      if (findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
+      if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
         return true;
       //res = true;
     }
