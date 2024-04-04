@@ -130,27 +130,23 @@ console.log( printMaze( mazeTest ) );
 
 
 function findpath(x,y){
-  // illegal move check
-  if(valid(map,x,y) ){
-    if (map[y][x] == 0) return false
-    // end move check
-    if (map[x][y] === 'e'){
-      console.log('Reached goal at: ' + x + ':' + y);
-    
-      return true; // if it is the goal (exit point)
+  res = false;
+  if( valid(map,x,y) ){
+    if ( map[x][y] != 0 && map[x][y] != 9 ) {
+      if (map[x][y] === 'e'){
+        console.log('Reached goal at: ' + x + ':' + y);
+        //res = true;
+        return true; // if it is the goal (exit point)
+      }
+      console.log('Im here at: ' + x + ':' + y);
+      map[x][y]=9; //here marking x,y position as part of solution path outlined by "9"
+  
+      if (findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
+        return true;
+      //res = true;
     }
-    if(map[y][x] == 9 || map[y][x] == 8)
-      return false;
-
-  console.log('Im here at: ' + x + ':' + y);
-  map[y][x]=9; //here marking x,y position as part of solution path outlined by "9"
-
-  findpath(x+1,y)
-  findpath(x,y+1);
-  findpath(x,y-1);
-  findpath(x-1,y);
   }
-  return false ;
+  return res ;
 }; 
 
 
