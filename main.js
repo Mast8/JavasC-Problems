@@ -81,12 +81,23 @@ function printMaze( maze ) {
   return result;
 }
 
-console.log( printMaze( mazeTest ) );
+function printMaze2( maze ) {
+  var result = "";
+  
+  for ( let row = 0; row < maze.length; row++ ) {
+    for ( let col = 0; col < maze[ row ].length; col++ ) {
+      result += maze[row][col] + " "
+    }
+    result += '\n';
+  }
+  return result;
+}
+
 
 
 // new maze
 
- map = [
+map = [
   [1,1,0,0,0,0,0,0],
   [0,1,1,0,0,0,0,0],
   [1,1,1,0,0,0,0,0],
@@ -94,8 +105,9 @@ console.log( printMaze( mazeTest ) );
   [1,1,0,0,1,0,0,1],
   [0,1,1,0,1,0,0,1],
   [1,1,1,0,1,0,0,1],
-  [1,0,0,0,1,1,1,'e']];
-
+  [1,0,0,0,1,1,'e',1]];
+  
+  console.log( printMaze2( map ) );
 
 /*  function findpath(x,y){
   // illegal move check
@@ -129,6 +141,8 @@ console.log( printMaze( mazeTest ) );
 };  */
 
 
+console.log(map)
+
 function findpath(x,y){
   res = false;
   if( valid(map,x,y) ){
@@ -136,16 +150,17 @@ function findpath(x,y){
       if (map[x][y] === 'e'){
         console.log('Reached goal at: ' + x + ':' + y);
         //res = true;
-        return true; // if it is the goal (exit point)
+        return true; 
       }
       console.log('Im here at: ' + x + ':' + y);
-      map[x][y]=9; //here marking x,y position as part of solution path outlined by "9"
+      map[x][y]=9; 
   
       if (findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
         return true;
       //res = true;
     }
   }
+
   return res ;
 }; 
 
@@ -158,5 +173,4 @@ function valid(map,x,y) {
   if(x >= 0 && x < (map.length) && y >= 0 && y < (map[0].length)) return true;
 }
 
-console.log(map)
 findpath(0, 0);
