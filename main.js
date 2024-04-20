@@ -174,3 +174,30 @@ function valid(map,x,y) {
 }
 
 findpath(0, 0);
+
+
+//let exponent = document.getElementById("exponent").value;
+function hanoi() {
+  let disk = document.getElementById("disks").value;
+  towerOfHanoi(disk, 'A', 'C', 'B'); 
+}
+
+
+function towerOfHanoi(n, from_rod,  to_rod,  aux_rod) 
+{ 
+  let count =0 ;
+  if (n == 0) { 
+    return; 
+  } 
+    
+    towerOfHanoi(n - 1, from_rod, aux_rod, to_rod); 
+    count =count+1;
+    document.write("Move disk "+ count +" "+ n + " from rod " + from_rod + 
+    " to rod " + to_rod+"<br/>"); 
+    towerOfHanoi(n - 1, aux_rod, to_rod, from_rod); 
+   
+} 
+  
+
+
+  

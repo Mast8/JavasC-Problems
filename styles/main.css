@@ -50,6 +50,14 @@ img {
   height: auto;
 }
 
+button {
+  color: black;
+  cursor: pointer;
+  width: 25%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 .genBtn {
   color: black;
   
