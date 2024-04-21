@@ -174,8 +174,19 @@ function valid(map,x,y) {
 function startMaze() {
   
   findpath(0, 0);
+  resetMaze();
 }
-
+function resetMaze(){
+  map = [
+    [1,1,0,0,0,0,0,0],
+    [0,1,1,0,0,0,0,0],
+    [1,1,1,0,0,0,0,0],
+    [1,0,1,1,1,1,1,1],
+    [1,1,0,0,1,0,0,1],
+    [0,1,1,0,1,0,0,1],
+    [1,1,1,0,1,0,0,1],
+    [1,0,0,0,1,1,'e',1]];
+}
 
 function hanoi() {
   let disk = document.getElementById("disks").value;
