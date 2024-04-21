@@ -147,17 +147,17 @@ function findpath(x,y){
   res = false;
   if( valid(map,x,y) ){
     if ( map[x][y] != 0 && map[x][y] != 9 ) {
-      if (map[x][y] === 'e'){
+      if (map[x][y] == 'e'){
         console.log('Reached goal at: ' + x + ':' + y);
-        //res = true;
         return true; 
       }
+      
       console.log('Im here at: ' + x + ':' + y);
-      map[x][y]=9; 
-  
+      map[x][y]= 9; 
+ 
       if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
-        return true;
-      //res = true;
+        return true; 
+      
     }
   }
 
@@ -165,18 +165,18 @@ function findpath(x,y){
 }; 
 
 
-
-
-
-
 function valid(map,x,y) {
   if(x >= 0 && x < (map.length) && y >= 0 && y < (map[0].length)) return true;
 }
 
-findpath(0, 0);
 
 
-//let exponent = document.getElementById("exponent").value;
+function startMaze() {
+  
+  findpath(0, 0);
+}
+
+
 function hanoi() {
   let disk = document.getElementById("disks").value;
   towerOfHanoi(disk, 'A', 'C', 'B'); 
@@ -185,15 +185,15 @@ function hanoi() {
 
 function towerOfHanoi(n, from_rod,  to_rod,  aux_rod) 
 { 
-  let count =0 ;
   if (n == 0) { 
     return; 
   } 
     
     towerOfHanoi(n - 1, from_rod, aux_rod, to_rod); 
-    count =count+1;
-    document.write("Move disk "+ count +" "+ n + " from rod " + from_rod + 
-    " to rod " + to_rod+"<br/>"); 
+    console.log(" Move disk "+ n + " from rod " + from_rod + 
+    " to rod " + to_rod);
+    //document.write("Move disk "+ count +" "+ n + " from rod " + from_rod + 
+    //" to rod " + to_rod+"<br/>"); 
     towerOfHanoi(n - 1, aux_rod, to_rod, from_rod); 
    
 } 

@@ -19,18 +19,28 @@
     <label > Power</label> <input type="number" id="exponent" name="potencia" oninput="calculate();">
     <label > Result</label> <input type="number" id="total" name="total">
 
-    <script src="main.js"></script>
+    
   </div>
 
   <div id="container">
-    <label > disks</label> <input type="number" required id="disks" name="disks">
-    <label > Origen</label>  <input type="string" id="Origen" name="Origen" >  
-    <label > Destiny </label> <input type="string" id="Destiny" name="Destiny">
-    <label > auxiliar</label> <input type="string" id="auxiliar" name="auxiliar">
-    <button onclick="hanoi()"> Start </button>
-    <script src="main.js"></script>
+    
+    <label > Start X position 0</label>   
+    <label > Start Y position 0</label> 
+
+    <button onclick="startMaze()"> Start Maze path </button>
+    
   </div>
 
+  <div id="container">
+    <h1>Hanoi tower </h1>
+    <label > disks</label> <input type="number" required id="disks" name="disks">
+    <!-- <label > Origen</label>  <input type="string" id="Origen" name="Origen" >  
+    <label > Destiny </label> <input type="string" id="Destiny" name="Destiny">
+    <label > auxiliar</label> <input type="string" id="auxiliar" name="auxiliar"> -->
+    <button onclick="hanoi()"> Start </button>
+    
+  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
