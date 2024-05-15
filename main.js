@@ -143,20 +143,30 @@ map = [
 
 console.log(map)
 
+
 function findpath(x,y){
   res = false;
   if( valid(map,x,y) ){
     if ( map[x][y] != 0 && map[x][y] != 9 ) {
       if (map[x][y] == 'e'){
         console.log('Reached goal at: ' + x + ':' + y);
+        const xPos = document.getElementById("x-pos");
+        const yPos = document.getElementById("y-pos");
+
+       
+        xPos.textContent = x;
+        yPos.textContent = y;
         return true; 
       }
       
       console.log('Im here at: ' + x + ':' + y);
       map[x][y]= 9; 
  
-      if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) )
+      if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) ){
+        //add position to page
+        
         return true; 
+      }
       
     }
   }
