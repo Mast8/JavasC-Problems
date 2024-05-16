@@ -150,12 +150,9 @@ function findpath(x,y){
     if ( map[x][y] != 0 && map[x][y] != 9 ) {
       if (map[x][y] == 'e'){
         console.log('Reached goal at: ' + x + ':' + y);
-        const xPos = document.getElementById("x-pos");
-        const yPos = document.getElementById("y-pos");
+        showPosition(x,y);
 
-       
-        xPos.textContent = x;
-        yPos.textContent = y;
+        
         return true; 
       }
       
@@ -172,8 +169,14 @@ function findpath(x,y){
   }
 
   return res ;
-}; 
+}
 
+function showPosition(x,y) {
+  const xPos = document.getElementById("x-pos");
+  const yPos = document.getElementById("y-pos");
+  xPos.textContent = x;
+  yPos.textContent = y;
+}
 
 function valid(map,x,y) {
   if(x >= 0 && x < (map.length) && y >= 0 && y < (map[0].length)) return true;
