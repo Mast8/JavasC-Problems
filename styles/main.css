@@ -58,7 +58,7 @@ button {
   border-radius: 20px;
 }
 
-.genBtn {
+.button {
   color: black;
   
   width: 25%;
@@ -67,10 +67,15 @@ button {
   
 }
 
-.genBtn:hover {
+input {
+  border-radius: 5px;
+}
+
+
+button:hover {
   cursor: pointer;
   color: white;
-  background-color: #990f0f;
+  background-color: #413c3c;
 }
 
 .ball, .mmball, .pbball {
@@ -85,6 +90,7 @@ button {
   width: 50px;
   
 }
+
 
 /*change megaball to yellow while retaining shadowing and position from ruleset above*/
 .mmball {

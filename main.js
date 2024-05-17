@@ -151,8 +151,6 @@ function findpath(x,y){
       if (map[x][y] == 'e'){
         console.log('Reached goal at: ' + x + ':' + y);
         showPosition(x,y);
-
-        
         return true; 
       }
       
@@ -160,8 +158,6 @@ function findpath(x,y){
       map[x][y]= 9; 
  
       if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) ){
-        //add position to page
-        
         return true; 
       }
       
