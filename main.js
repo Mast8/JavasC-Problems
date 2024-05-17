@@ -169,9 +169,7 @@ function findpath(x,y){
 
 function showPosition(x,y) {
   const xPos = document.getElementById("x-pos");
-  const yPos = document.getElementById("y-pos");
-  xPos.textContent = x;
-  yPos.textContent = y;
+  xPos.textContent = x + "," +y;
 }
 
 function valid(map,x,y) {

@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   box-sizing: border-box;
 }
 
@@ -24,26 +24,12 @@ body {
   color: #fff;
   margin: 0 auto;
   max-width: 85%;
-  padding: 20px;
+  padding: 10px;
+ 
 }
 
-.megamillions, .powerball {
-  padding: 20px;
-}
 
-h1 {
-  color: #333;
-  padding: 20px;
-}
 
-.rules {
-  color: rgb(54, 143, 19);
-}
-
-.logo {
-  padding: 20px;
-  text-align: center;
-}
 
 img {
   max-width: 100%;
@@ -56,19 +42,12 @@ button {
   width: 25%;
   padding: 10px;
   border-radius: 20px;
-}
-
-.button {
-  color: black;
-  
-  width: 25%;
-  padding: 10px;
-  border-radius: 20px;
-  
+  margin-top: 10px;
 }
 
 input {
   border-radius: 5px;
+  
 }
 
 

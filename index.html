@@ -11,10 +11,10 @@
 </head>
 
 <body>
-  <h1>Power base </h1>
+ 
 
   <div id="container">
-    
+    <h1>Power base </h1>
     <label > Base</label>  <input type="number" id="base" name="base" >  
     <label > Power</label> <input type="number" id="exponent" name="potencia" oninput="calculate();">
     <label > Result</label> <input type="number" id="total" name="total">
@@ -23,9 +23,10 @@
   </div>
 
   <div id="container">
-    <div class="endPosition"> Solution position
-      <label id="x-pos"> </label>   
-      <label id="y-pos"> </label> 
+    <h1>Maze </h1>
+    <div class="endPosition">Position
+      <label id="x-pos">0,0</label>   
+      
     </div>
 
     <button onclick="startMaze()"> Start Maze path </button>
@@ -34,7 +35,7 @@
 
   <div id="container">
     <h1>Hanoi tower </h1>
-    <label > disks</label> <input type="number" required id="disks" name="disks">
+    <label > Number of disks</label> <input type="number" required id="disks" name="disks">
     <!-- <label > Origen</label>  <input type="string" id="Origen" name="Origen" >  
     <label > Destiny </label> <input type="string" id="Destiny" name="Destiny">
     <label > auxiliar</label> <input type="string" id="auxiliar" name="auxiliar"> -->
