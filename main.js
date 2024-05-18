@@ -217,5 +217,18 @@ function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
 } 
   
 
+const numbers = [2, 4, 67, 8, 44, 6, 12];
 
-  
+function linearSearch(array, num) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === num) {
+      console.log(num+ " Found in pos " + i )
+      return i;
+    }
+  }
+  console.log(num+ "Not Found")
+  return -1;
+}
+
+linearSearch(numbers, 8); // returns index 4
+linearSearch(numbers, 28); // since 28 is not there, returns -1 
