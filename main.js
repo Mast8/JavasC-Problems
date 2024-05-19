@@ -226,9 +226,42 @@ function linearSearch(array, num) {
       return i;
     }
   }
-  console.log(num+ "Not Found")
+  console.log(num+ " Not Found")
   return -1;
 }
 
-linearSearch(numbers, 8); // returns index 4
-linearSearch(numbers, 28); // since 28 is not there, returns -1 
+linearSearch(numbers, 8); 
+linearSearch(numbers, 28); 
+
+
+function betterLinearSearch(array, element) {
+  let length = array.length;
+  let left = 0;
+  let right = length - 1;
+
+  let position = -1;
+
+  while (left <= right) {
+    if (array[left] == element) {
+      position = left;
+      console.log(`${element} is present at index ${position}. attempt ${left + 1}`);
+      break;
+    }
+
+    if (array[right] == element) {
+      position = right;
+      console.log(`${element} is present at index ${position}.  attempt ${length - right}`);
+      break;
+    }
+    left++;
+    right--;
+  }
+
+  if (position == -1) {
+    console.log(`${element} not found. attempt ${left}`);
+  }
+}
+
+betterLinearSearch(numbers, 8); 
+betterLinearSearch(numbers, 12); 
+betterLinearSearch(numbers, 2);
