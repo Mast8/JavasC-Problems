@@ -19,16 +19,14 @@ function binarySearch(arr, val) {
   let start = 0;
   let end = arr.length - 1;
 
-  let res = 0;
+  let res = val +" Not found";
 
   while (start <= end) {
     let mid = Math.floor((start + end) / 2);
 
     if (arr[mid] === val) {
-      res = "Yes, found in index " + mid;
+      res = val + " found in index " + mid;
       document.getElementById("total").value = mid;
-      //return mid;
-      return res;
     }
 
     if (val < arr[mid]) {
@@ -37,15 +35,13 @@ function binarySearch(arr, val) {
       start = mid + 1;
     }
   }
-  //res = "no";
-  console.log(res + "x ")
   return res;
-  //return -1;
 }
 
 const arr = [0,1,2,3,4,6,7,8,100,10000];
 //binarySearch(arr, 100)
 console.log(binarySearch(arr, 100)); // 6
+console.log(binarySearch(arr, 90)); // 6
 
 
 mazeTest =
