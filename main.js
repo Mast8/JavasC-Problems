@@ -6,14 +6,12 @@ function power(base, exponent) {
 function calculate() {
   var base = document.getElementById("base").value;
   var exponent = document.getElementById("exponent").value;
-  if( base >0 && exponent >0 )
-  {
+  if( base >0 && exponent >0 ){
     var res = 0;
     res = power(base, exponent);
     document.getElementById("total").value = res;
   }
 }
-
 
 function binarySearch(arr, val) {
   let start = 0;
@@ -39,9 +37,9 @@ function binarySearch(arr, val) {
 }
 
 const arr = [0,1,2,3,4,6,7,8,100,10000];
-//binarySearch(arr, 100)
-console.log(binarySearch(arr, 100)); // 6
-console.log(binarySearch(arr, 90)); // 6
+
+console.log(binarySearch(arr, 100)); // 
+console.log(binarySearch(arr, 90)); // 
 
 
 mazeTest =
@@ -61,9 +59,8 @@ function printMaze( maze ) {
   for ( let row = 0; row < maze.length; row++ ) {
     for ( let col = 0; col < maze[ row ].length; col++ ) {
       pos = maze[ row ][ col ];
-      if(pos != 'O')
-      {
-        //result += maze [row][col] + '.'; 
+      if(pos != 'O'){
+        
         result += matrix[row][col] = '.';
       }
       else {
@@ -104,37 +101,6 @@ map = [
   [1,0,0,0,1,1,'e',1]];
   
   console.log( printMaze2( map ) );
-
-/*  function findpath(x,y){
-  // illegal move check
-  if (x < 0 || x > (map[0].length -1) || y < 0 || y > (map.length - 1)) return false; //if it is outside of map
-    //if (map[y][x] == 0) return false; //it is not open
-    if (map[y][x] == 0) return false
-
-  // end move check
-  //if (x == goalx && y == goaly){
-    if (map[x][y] === 'e'){
-      console.log('Reached goal at: ' + x + ':' + y);
-      return true; // if it is the goal (exit point)
-    }
-  if(map[y][x] == 9 || map[y][x] == 8)
-      return false;
-
-  console.log('Im here at: ' + x + ':' + y);
-
-  map[y][x]=9; //here marking x,y position as part of solution path outlined by "9"
-
-  if(findpath(x+1,y)) 
-      return true;    
-  if(findpath(x,y+1)) 
-      return true;    
-  if(findpath(x,y-1))
-      return true;
-  if(findpath(x-1,y)) 
-      return true;              
-
-  return false;
-};  */
 
 
 console.log(map)
@@ -206,8 +172,6 @@ function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
     towerOfHanoi(n - 1, from_rod, aux_rod, to_rod); 
     console.log(" Move disk "+ n + " from rod " + from_rod + 
     " to rod " + to_rod);
-    //document.write("Move disk "+ count +" "+ n + " from rod " + from_rod + 
-    //" to rod " + to_rod+"<br/>"); 
     towerOfHanoi(n - 1, aux_rod, to_rod, from_rod); 
    
 } 
@@ -226,8 +190,9 @@ function linearSearch(array, num) {
   return -1;
 }
 
+linearSearch(numbers, 2); 
 linearSearch(numbers, 8); 
-linearSearch(numbers, 28); 
+linearSearch(numbers, 12); 
 
 
 function betterLinearSearch(array, element) {
