@@ -68,7 +68,7 @@ function printMaze( maze ) {
         result += matrix[row][col] = 'W';
       }  
     }
-    //console.log(matrix)
+    
     result += '\n';
   }
   return result;
