@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
   max-width: 85%;
   padding: 10px;
-  margin: 16px;
+ 
 }
 
 
@@ -60,30 +60,7 @@ button:hover {
   background-color: #413c3c;
 }
 
-.ball, .mmball, .pbball {
-  background-color: #fff;
-  border-radius: 50%;
-  color: #333;
-  display: inline-block;
-  font-size: 25px;
-  font-weight: 500;
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
-  
-}
 
-
-/*change megaball to yellow while retaining shadowing and position from ruleset above*/
-.mmball {
-  background-color: #ff0;
-}
-
-/*ditto for powerball color (red)*/
-.pbball {
-  background-color: #f00;
-  color: #fff;
-}
 
 p {
   color: #333;
@@ -100,18 +77,11 @@ p {
   font-size: small;
 }
 
-@media all and (max-width:576px) {
+@media all and (max-width:650px) {
 
-  .ball, .mmball, .pbball {
-    font-size: 15px;
-    height: 35px;
-    line-height: 35px;
-    width: 35px;
-
-  }
-
-  p {
-    font-size: 12px;
+  .input-base{
+    display: flex;
+    flex-direction: column;
   }
 
 }
