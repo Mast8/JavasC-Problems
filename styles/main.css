@@ -47,7 +47,8 @@ button {
 
 input {
   border-radius: 5px;
-  
+  width: 10ch;
+  direction: rtl;
 }
 
 .input-base{
