@@ -180,19 +180,29 @@ function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
 const numbers = [2, 4, 67, 8, 44, 6, 12];
 
 function linearSearch(array, num) {
+  let res = 0 ;
   for (let i = 0; i < array.length; i++) {
     if (array[i] === num) {
-      console.log(num+ " Found in pos " + i )
-      return i;
+      return i; 
+      //res = num+ " Lin Found in pos " + i ;
+      
     }
-  }
-  console.log(num+ " Not Found")
+    /* else 
+      res = num+ " Lin Not Found " +i ; */
+  } 
+    res = -1;
+  //return res;
   return -1;
 }
 
-linearSearch(numbers, 2); 
-linearSearch(numbers, 8); 
-linearSearch(numbers, 12); 
+let result = linearSearch(numbers, 2);
+    (result == -1)
+        ? console.log("Element is not present in array")
+        : console.log("Element is present at index " + result);
+
+
+console.log(linearSearch(numbers, 8)); 
+console.log(linearSearch(numbers, 11)); 
 
 
 function betterLinearSearch(array, element) {
