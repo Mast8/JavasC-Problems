@@ -184,25 +184,33 @@ function linearSearch(array, num) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === num) {
       return i; 
-      //res = num+ " Lin Found in pos " + i ;
-      
+
     }
-    /* else 
-      res = num+ " Lin Not Found " +i ; */
+
   } 
-    res = -1;
-  //return res;
+   
   return -1;
 }
 
-let result = linearSearch(numbers, 2);
-    (result == -1)
-        ? console.log("Element is not present in array")
-        : console.log("Element is present at index " + result);
+function test (array, search){
+  let result = linearSearch(array, search);
+  /*  (result == -1)
+       ? console.log("Element is not present in array")
+       : console.log("Element is present at index " + result);
+*/
+       let res =  "";
+       if(result == -1)
+         res = "Element is not present in array";
+       else 
+         res = "Element is present at index " + result;
+     console.log(res);
+
+}
 
 
-console.log(linearSearch(numbers, 8)); 
-console.log(linearSearch(numbers, 11)); 
+test(numbers, 2); 
+test(numbers, 8); 
+test(numbers, 11); 
 
 
 function betterLinearSearch(array, element) {
