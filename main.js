@@ -192,7 +192,7 @@ function linearSearch(array, num) {
   return -1;
 }
 
-function test (array, search){
+function test(array, search){
   let result = linearSearch(array, search);
   /*  (result == -1)
        ? console.log("Element is not present in array")
@@ -200,14 +200,14 @@ function test (array, search){
 */
        let res =  "";
        if(result == -1)
-         res = "Element is not present in array";
+         res = search + " Element is not present in array";
        else 
-         res = "Element is present at index " + result;
+         res = search +  " Element is present at index " + result;
      console.log(res);
 
 }
 
-
+console.log(numbers)
 test(numbers, 2); 
 test(numbers, 8); 
 test(numbers, 11); 
