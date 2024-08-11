@@ -6,7 +6,7 @@ function power(base, exponent) {
 function calculate() {
   var base = document.getElementById("base").value;
   var exponent = document.getElementById("exponent").value;
-  if( base >0 && exponent >0 ){
+  if( base > 0 && exponent > 0 ){
     var res = 0;
     res = power(base, exponent);
     document.getElementById("total").value = res;
@@ -17,13 +17,13 @@ function binarySearch(arr, val) {
   let start = 0;
   let end = arr.length - 1;
 
-  let res = val +" Not found";
+  let res = val +" element Not found";
 
   while (start <= end) {
     let mid = Math.floor((start + end) / 2);
 
     if (arr[mid] === val) {
-      res = val + " found in index " + mid;
+      res = val + " element found in index " + mid;
       document.getElementById("total").value = mid;
     }
 
@@ -33,13 +33,14 @@ function binarySearch(arr, val) {
       start = mid + 1;
     }
   }
+  
   return res;
 }
 
 const arr = [0,1,2,3,4,6,7,8,100,10000];
 
-console.log(binarySearch(arr, 100)); // 
-console.log(binarySearch(arr, 90)); // 
+console.log(binarySearch(arr, 100)); 
+console.log(binarySearch(arr, 90)); 
 
 
 mazeTest =
@@ -100,8 +101,7 @@ map = [
   [1,1,1,0,1,0,0,1],
   [1,0,0,0,1,1,'e',1]];
   
-  console.log( printMaze2( map ) );
-
+console.log( printMaze2( map ) );
 
 console.log(map)
 
@@ -111,12 +111,12 @@ function findpath(x,y){
   if( valid(map,x,y) ){
     if ( map[x][y] != 0 && map[x][y] != 9 ) {
       if (map[x][y] == 'e'){
-        console.log('Reached goal at: ' + x + ':' + y);
+        console.log('Reached goal at: ' + x + ',' + y);
         showPosition(x,y);
         return true; 
       }
       
-      console.log('Im here at: ' + x + ':' + y);
+      console.log('Im here at: ' + x + ',' + y);
       map[x][y]= 9; 
  
       if ( findpath(x+1,y) || findpath(x,y+1) || findpath(x,y-1) ||findpath(x-1,y) ){
@@ -184,7 +184,6 @@ function linearSearch(array, num) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === num) {
       return i; 
-
     }
 
   } 
@@ -194,10 +193,7 @@ function linearSearch(array, num) {
 
 function test(array, search){
   let result = linearSearch(array, search);
-  /*  (result == -1)
-       ? console.log("Element is not present in array")
-       : console.log("Element is present at index " + result);
-*/
+
        let res =  "";
        if(result == -1)
          res = search + " Element is not present in array";
@@ -240,6 +236,7 @@ function betterLinearSearch(array, element) {
     console.log(`${element} not found. attempt ${left}`);
   }
 }
+
 
 betterLinearSearch(numbers, 8); 
 betterLinearSearch(numbers, 12); 
